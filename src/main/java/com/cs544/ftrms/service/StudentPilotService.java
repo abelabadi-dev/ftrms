@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import ftrms.dao.StudentPilotDao;
-import ftrms.domain.StudentPilot;
+import com.cs544.ftrms.dao.StudentPilotDao;
+import com.cs544.ftrms.model.StudentPilot;
 
 @Service
 public class StudentPilotService {
