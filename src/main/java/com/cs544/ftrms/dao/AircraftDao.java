@@ -36,4 +36,9 @@ public class AircraftDao {
 	public List<Aircraft> getAllAircrafts(){
 		return sessionFactory.getCurrentSession().createQuery("from Aircraft").list();
 	}
+	
+	public void editAircraft(int id, Aircraft a){
+		Aircraft ac = (Aircraft)sessionFactory.getCurrentSession().load(Aircraft.class, id);
+		sessionFactory.getCurrentSession().update(ac);
+	}
 }
