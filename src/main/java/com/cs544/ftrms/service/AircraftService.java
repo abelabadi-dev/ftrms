@@ -38,6 +38,11 @@ public class AircraftService implements IAircraft{
 	public void deleteAircraft(String callSign){
 		aircraftDao.deleteAircraft(callSign);
 	}
+	@Override
+	public void editAircraft(int id, Aircraft a) {
+		aircraftDao.editAircraft(id, a);
+		
+	}
 	
 	
 	

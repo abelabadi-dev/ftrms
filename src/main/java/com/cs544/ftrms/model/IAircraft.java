@@ -6,4 +6,5 @@ public interface IAircraft {
 	public List<Aircraft> getListOfAircraft();
 	public Aircraft getAircraft(String callSign);
 	public void deleteAircraft(String callSign);
+	public void editAircraft(int id, Aircraft a);
 }
