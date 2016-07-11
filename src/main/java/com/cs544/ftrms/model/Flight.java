@@ -25,13 +25,13 @@ public class Flight {
 	
 	private Pilot studentPilot;
 	private Pilot instructorPilot;
-	private Aircaft aircraft;
+	private Aircraft aircraft;
 	
 	public Flight(){}
 	
 	public Flight(long id, Airport departureAirport, Airport arrivalAirport, Date takeoffTime, Date landingTime,
 			FlightType flightType, InstructionType instructionType, int numberOfLandings, int numberOfTakeOffs,
-			AircraftStatus aircraftStatus, Pilot studentPilot, Pilot instructorPilot, Aircaft aircraft) {
+			AircraftStatus aircraftStatus, Pilot studentPilot, Pilot instructorPilot, Aircraft aircraft) {
 		super();
 		this.id = id;
 		this.departureAirport = departureAirport;
@@ -144,11 +144,11 @@ public class Flight {
 		this.instructorPilot = instructorPilot;
 	}
 
-	public Aircaft getAircraft() {
+	public Aircraft getAircraft() {
 		return aircraft;
 	}
 
-	public void setAircraft(Aircaft aircraft) {
+	public void setAircraft(Aircraft aircraft) {
 		this.aircraft = aircraft;
 	} 
 	

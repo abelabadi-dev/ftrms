@@ -56,9 +56,9 @@ public interface IFlight {
 
 	public void setInstructorPilot(IPilot instructorPilot);
 
-	public Aircaft getAircraft();
+	public Aircraft getAircraft();
 
-	public void setAircraft(Aircaft aircraft); 
+	public void setAircraft(Aircraft aircraft); 
 	
 	
 
