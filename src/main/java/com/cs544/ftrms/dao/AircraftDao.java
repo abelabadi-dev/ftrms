@@ -24,11 +24,11 @@ public class AircraftDao {
 	}
 	
 	public Aircraft getAircraft(String callSign){
-		return (Aircraft)sessionFactory.getCurrentSession().get(Aircraft.class, id);
+		return (Aircraft)sessionFactory.getCurrentSession().get(Aircraft.class, callSign);
 	}
 	
 	public void deleteAircraft(String callSign){
-		Aircraft ac = (Aircraft)sessionFactory.getCurrentSession().load(Aircraft.class, id);
+		Aircraft ac = (Aircraft)sessionFactory.getCurrentSession().load(Aircraft.class, callSign);
 		sessionFactory.getCurrentSession().delete(ac);
 	}
 	
