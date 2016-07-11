@@ -19,7 +19,29 @@
 				<td>Call Sign:</td>
 				<td><input type="text" name="aircraftNo" /></td>
 			</tr>
-			
+			<tr>
+				<td>Aircraft Type:</td>
+				<td><select name="aircraftType">
+						<option value="singleEngine">Single Engine</option>
+						<option value="doubleEngine">Double Engine</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>AirWorthy Date:</td>
+				<td><input type="text" name="aircraftNo" /></td>
+			</tr>
+
+			<tr>
+				<td>Next Inspection Date:</td>
+				<td><input type="text" id="nextInspectionDate"></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td><input type="submit" value="submit" /></td>
+			</tr>
+
+		</table>
 	</form:form>
 </body>
 </html>
