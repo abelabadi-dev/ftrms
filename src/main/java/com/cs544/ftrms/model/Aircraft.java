@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 @Entity
-public class Aircaft {
+public class Aircraft {
 	@Id
 	@GeneratedValue
 	private int id;
@@ -22,9 +22,9 @@ public class Aircaft {
 	private Date nextInspectionDate;
 
 
-	public Aircaft(){}
+	public Aircraft(){}
 	
-	public Aircaft(long aircraftNumber, String callSign, String aircraftType, Date airworthyDate,
+	public Aircraft(long aircraftNumber, String callSign, String aircraftType, Date airworthyDate,
 			Date nextInspectionDate) {
 		super();
 		this.aircraftNumber = aircraftNumber;
