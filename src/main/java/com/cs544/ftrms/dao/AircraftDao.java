@@ -23,11 +23,11 @@ public class AircraftDao {
 		sessionFactory.getCurrentSession().save(aircraft);	
 	}
 	
-	public Aircraft getAircraft(int id){
+	public Aircraft getAircraft(String callSign){
 		return (Aircraft)sessionFactory.getCurrentSession().get(Aircraft.class, id);
 	}
 	
-	public void deleteAircraft(int id){
+	public void deleteAircraft(String callSign){
 		Aircraft ac = (Aircraft)sessionFactory.getCurrentSession().load(Aircraft.class, id);
 		sessionFactory.getCurrentSession().delete(ac);
 	}

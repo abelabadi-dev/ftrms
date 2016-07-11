@@ -10,9 +10,10 @@ import org.springframework.stereotype.Service;
 
 import com.cs544.ftrms.dao.AircraftDao;
 import com.cs544.ftrms.model.Aircraft;
+import com.cs544.ftrms.model.IAircraft;
 
 @Service
-public class AircraftService {
+public class AircraftService implements IAircraft{
 	@Autowired
 	SessionFactory sessionFactory;
 	private AircraftDao aircraftDao;
@@ -30,12 +31,12 @@ public class AircraftService {
 		
 	}
 	
-	public Aircraft getAircraft(int id){
-		return aircraftDao.getAircraft(id);
+	public Aircraft getAircraft(String callSign){
+		return aircraftDao.getAircraft(callSign);
 	}
 	
-	public void deleteAircraft(int id){
-		aircraftDao.deleteAircraft(id);
+	public void deleteAircraft(String callSign){
+		aircraftDao.deleteAircraft(callSign);
 	}
 	
 	
