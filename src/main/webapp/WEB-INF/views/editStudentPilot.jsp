@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Student Registration Form</title>
+<title>Student Update Form</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
 	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
@@ -12,12 +12,12 @@
 </head>
 <body>
 	<div class="container">
-		<form:form class="form-horizontal" modelAttribute="sp" action="/cs544/addSP"
-			 method="post">
+		<form:form class="form-horizontal" commandName="edSP" action="/cs544/test/3"
+			method="post">
 			<fieldset>
 
 				<!-- Form Name -->
-				<legend>Student Registration Form</legend>
+				<legend>Student Update Form</legend>
 				<!-- Text input-->
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="firstName">First
@@ -144,8 +144,9 @@
 					<label class="col-md-4 control-label" for="registerbtn"></label>
 					<div class="col-md-8">
 						<form:button id="registerbtn" name="registerbtn"
-							class="btn btn-success">Register Student</form:button>
-						<a href="admin" 	class="btn btn-danger"> Cancel</a>
+							class="btn btn-success">Update Student</form:button>
+						<form:button id="cancelBtn" name="cancelBtn"
+							class="btn btn-danger">Cancel</form:button>
 					</div>
 				</div>
 			</fieldset>

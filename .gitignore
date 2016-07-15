@@ -11,7 +11,7 @@ local.properties
 .loadpath
 .recommenders
 
-# Eclipse Core
+#Eclipse Core
 .project
 
 # External tool builders
@@ -46,6 +46,5 @@ local.properties
 
 # STS (Spring Tool Suite)
 .springBeans
-
 # Code Recommenders
 .recommenders/

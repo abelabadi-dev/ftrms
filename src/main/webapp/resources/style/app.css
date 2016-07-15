@@ -1,0 +1,14 @@
+.container{
+	margin-top: 5px;
+}
+.aside{
+	float: left;
+}
+.right-panel{
+	float: right;
+	width: 80%;
+}
+
+.top-margin{
+	margin-top: -6px;
+}

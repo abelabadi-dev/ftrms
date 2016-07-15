@@ -1,0 +1,42 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+    
+	<http auto-config="true">
+	    <!--<access-denied-handler error-page="/accessdenied"/>
+	    <intercept-url pattern="/login" access="hasRole('IS_AUTHENTICATED_ANONYMOUSLY')" />-->
+	    
+	    <intercept-url pattern="/" method="GET" access="permitAll"/>
+	     <intercept-url pattern="/login" method="GET" access="permitAll"/>
+	     <intercept-url pattern="/successController" method="GET" access="permitAll"/>
+		<intercept-url pattern="/admin" method="GET" access="hasRole('ROLE_ADMIN')"/>
+		<intercept-url pattern="/studentMain" method="GET" access="hasRole('ROLE_STUDENT')"/>
+		<intercept-url pattern="/managerMain" method="GET" access="hasRole('ROLE_MANAGER')"/>
+		<intercept-url pattern="/instructorMain" method="GET" access="hasRole('ROLE_INSTRUCTOR')"/>
+		<intercept-url pattern="/recordFlight" method="GET" access="hasRole('ROLE_INSTRUCTOR')"/>
+
+		<form-login login-page="/login" authentication-failure-url="/accessDenied"
+			default-target-url="/successController" 
+			username-parameter="username"
+			password-parameter="password" 
+			login-processing-url="/j_spring_security_check"/>
+		<logout logout-success-url="/"/>	
+		<csrf disabled="true"/>	
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="admin" password="admin" authorities="ROLE_ADMIN" />
+				<user name="1234" password="1234" authorities="ROLE_STUDENT" />
+				<user name="12345" password="12345" authorities="ROLE_STUDENT" />
+				<user name="mus" password="mus" authorities="ROLE_INSTRUCTOR" />
+				<user name="2222" password="2222" authorities="ROLE_INSTRUCTOR" />
+				<user name="manager" password="manager" authorities="ROLE_MANAGER" />
+				<user name="eng" password="eng" authorities="ROLE_ENGINEER" />
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+</beans:beans>
